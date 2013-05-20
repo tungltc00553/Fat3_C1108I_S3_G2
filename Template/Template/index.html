@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/slideshow.css" media="screen" />
+    
+    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nivo.slider.pack.js"></script>
+    
+    <script type="text/javascript"><!--
+                        $(document).ready(function() {
+                        	$('#slideshow').nivoSlider();
+                        });
+                    --></script>
+    <script type="text/javascript">
+            $(document).ready(function(){ 
+            $('.find').click(function(){ 
+            $('.show').slideToggle('fast');
+            })
+            })
+        </script>
+	<title>Home Page</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="main-wrapper">
+            <div id="header">
+                <div class="htop">
+                    <div class="links">
+                        <a href="#">My Account</a>
+                        <a href="#">Login</a>
+                    </div><!-- End .links -->
+                </div><!-- End .htop -->
+                <div class="hsecond">
+                    <div id="logo">
+                        <a href="#"><img src="images/logo.png" alt="Bus Online Ticket"/></a>
+                    </div><!-- End #logo -->
+					<div id="banner">
+						<a href="#"><img src="images/banner.png" alt="Banner" /></a>
+					</div>
+                </div><!-- End .hsecond -->
+                <div id="top-nav">
+                    <ul id="menu">
+                        <li class="home"><a title="Home" href="#"><span>Home</span></a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul><!-- End #menu -->
+                    <div id="phone-call">
+                    </div><!-- End #phone-call -->
+            </div><!-- End #header -->
+            
+            <div id="container">
+                <div id="search">
+                    <div class="box">
+                        <h2>Book Bus Tickets</h2>
+                        <div class="box-content">
+                            <ul>
+                                <li>
+                                    <input class="find" type="text" value=" --- From place --- "/>
+                                    <div class="show">
+                                        <h2 class="choice">Choise place: </h2>
+                                        <div class="place-item">
+                                            <h3>The North</h3>
+                                            <ul>
+                                                <li><a href="#">Ha Noi</a></li>
+                                                <li><a href="#">Hai Duong</a></li>
+                                                <li><a href="#">Vinh</a></li>
+                                                <li><a href="#">Thanh Hoa</a></li>
+                                            </ul>
+                                        </div><!-- End .place-item -->
+                                        
+                                        <div class="place-item">
+                                            <h3>The South</h3>
+                                            <ul>
+                                                <li><a href="#">Ha Noi</a></li>
+                                                <li><a href="#">Hai Duong</a></li>
+                                                <li><a href="#">Vinh</a></li>
+                                                <li><a href="#">Thanh Hoa</a></li>
+                                            </ul>
+                                        </div><!-- End .place-item -->
+                                        
+                                        <div class="place-item">
+                                            <input type="text" value=""/>
+                                            <input type="button" value="Choise"/>
+                                        </div><!-- End .place-item-->
+                                    </div>
+                                </li>
+                                <li>
+                                    <input type="text" value=" --- To place --- "/><input class="find" type="button"/>
+                                </li>
+                                <li>
+                                    <input type="text" value=" --- Start date --- "/><input class="find" type="button"/>
+                                </li>
+                                <li>
+                                    <input type="text" value=" --- Due date --- "/><input class="find" type="button"/>
+                                </li>
+                                <li>
+                                    <input type="button" value="Search" />
+                                </li>
+                            </ul>
+                        </div><!-- End .box-content -->
+                    </div><!-- End .box -->
+                    
+                    <div class="box">
+                        <h2>Book Bus Tickets</h2>
+                        <div class="box-content">
+                            
+                        </div><!-- End .box-content -->
+                    </div><!-- End .box -->
+                    
+                </div><!-- End #search -->
+                
+                <div id="content">
+                    <div class="breadcrumb">
+                        <a href="#">Home</a>
+                         » 
+                        <a href="#">Booking</a>
+                    </div><!-- End .breadcrumb -->
+                    
+                    <!-- Nivo Slider Start -->
+                    <section class="slider-wrapper">
+                      <div id="slideshow" class="nivoSlider"> <a class="nivo-imagesLink" href="#"><img src="images/slider/slide-1.jpg" alt="slide-1" /></a> <a class="nivo-imagesLink" href="#"><img src="images/slider/slide-2.jpg" alt="slide-2" /></a> <a class="nivo-imagesLink" href="#"><img src="images/slider/slide-3.jpg" alt="slide-3" /></a> </div>
+                    </section>
+                    <!-- Nivo Slider End-->
+                    
+                    <div id="news">
+                        <h2>Book News</h2>
+                        <div class="news-item">
+                            <div class="item-image">
+                                <a href="#"><img src="images/bus/1.jpg"/></a>
+                            </div><!-- End .image -->
+                            
+                            <div class="item-content">
+                                <div class="place">
+                                    <a href="#">From: <span>Ha Noi</span>To: <span>TP.Ho Chi Minh</span></a>
+                                </div><!-- End .place -->
+                                
+                                <div class="info">
+                                    Start date: <span>5/16/2013</span>Time: <span>2:07 PM</span>
+                                </div><!-- End .info -->
+                                
+                                
+                            </div><!-- End .item-content -->
+                            <div class="price">
+                                <p>USD 73.75</p>
+                            <a href="#"><span>View</span></a>
+                            </div><!-- End .price -->
+                            
+                        </div><!-- End .news-item -->
+                        
+                        <div class="news-item">
+                            <div class="item-image">
+                                <a href="#"><img src="images/bus/2.jpg"/></a>
+                            </div><!-- End .image -->
+                            
+                            <div class="item-content">
+                                <div class="place">
+                                    <a href="#">From: <span>Ha Noi</span>To: <span>TP.Ho Chi Minh</span></a>
+                                </div><!-- End .place -->
+                                
+                                <div class="info">
+                                    Start date: <span>5/16/2013</span>Time: <span>2:07 PM</span>
+                                </div><!-- End .info -->
+                                
+                                
+                            </div><!-- End .item-content -->
+                            <div class="price">
+                                <p>USD 73.75</p>
+                            <a href="#"><span>View</span></a>
+                            </div><!-- End .price -->
+                            
+                        </div><!-- End .news-item -->
+                        
+                        <div class="news-item">
+                            <div class="item-image">
+                                <a href="#"><img src="images/bus/3.jpg"/></a>
+                            </div><!-- End .image -->
+                            
+                            <div class="item-content">
+                                <div class="place">
+                                    <a href="#">From: <span>Ha Noi</span>To: <span>TP.Ho Chi Minh</span></a>
+                                </div><!-- End .place -->
+                                
+                                <div class="info">
+                                    Start date: <span>5/16/2013</span>Time: <span>2:07 PM</span>
+                                </div><!-- End .info -->
+                                
+                                
+                            </div><!-- End .item-content -->
+                            <div class="price">
+                                <p>USD 73.75</p>
+                            <a href="#"><span>View</span></a>
+                            </div><!-- End .price -->
+                            
+                        </div><!-- End .news-item -->
+                        
+                        <div class="news-item">
+                            <div class="item-image">
+                                <a href="#"><img src="images/bus/4.jpg"/></a>
+                            </div><!-- End .image -->
+                            
+                            <div class="item-content">
+                                <div class="place">
+                                    <a href="#">From: <span>Ha Noi</span>To: <span>TP.Ho Chi Minh</span></a>
+                                </div><!-- End .place -->
+                                
+                                <div class="info">
+                                    Start date: <span>5/16/2013</span>Time: <span>2:07 PM</span>
+                                </div><!-- End .info -->
+                                
+                                
+                            </div><!-- End .item-content -->
+                            <div class="price">
+                                <p>USD 73.75</p>
+                            <a href="#"><span>View</span></a>
+                            </div><!-- End .price -->
+                            
+                        </div><!-- End .news-item -->
+                    </div><!-- End #news -->
+                </div><!-- End #content -->
+            </div><!-- End #container -->
+        </div><!-- End #main-wrapper -->     
+    </div><!-- End #wrapper -->
+    
+    <div id="footer">
+        <div id="main-footer">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Site Map</a></li>
+            </ul>
+            <div class="copyright">
+                <p>Copyright (C) Bus Online Ticket 2013</p>            
+            </div><!-- End .copyright -->
+        </div><!-- End #main-footer -->
+    </div><!-- End #footer -->
+</body>
+</html>
