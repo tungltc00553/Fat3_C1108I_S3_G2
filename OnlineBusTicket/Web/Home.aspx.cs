@@ -13,7 +13,7 @@ public partial class Home : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            rptListBus.DataSource = ListBusBll.GetAllListBus();
+            rptListBus.DataSource = ListBusBll.GetListTopNew();
             rptListBus.DataBind();
         }
     }

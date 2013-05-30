@@ -11,18 +11,25 @@ namespace ClassLibrary.bll
     public class ListBusBll
     {
         /*
-         * @todo: get all list bus
+         * @todo: get list top new
          * */
-        public static DataTable GetAllListBus()
+        public static DataTable GetListTopNew()
         {
-            return ListBusDal.GetAllListBus();
+            return ListBusDal.GetListTopNew();
         }
         /*
          * @todo : search list bus
          * */
-        public static DataTable SearchListBus(String from, String to, DateTime fromDate, DateTime toDate)
+        public static DataTable SearchListBus(String fromPlace, String toPlace, DateTime startDate, DateTime dueDate)
         {
-            return ListBusDal.SearchListBus(from, to, fromDate, toDate);
+            return ListBusDal.SearchListBus(fromPlace, toPlace, startDate, dueDate);
+        }
+        /*
+         * @todo: get a list bus
+         * */
+        public static DataTable GetListBusByListBusId(int listBusId)
+        {
+            return ListBusDal.GetListBusByListBusId(listBusId);
         }
     }
 }

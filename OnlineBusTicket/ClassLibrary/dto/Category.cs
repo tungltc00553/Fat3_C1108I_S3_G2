@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ClassLibrary.dto
 {
-    class Category
+    public class Category
     {
         private int categoryId;
 
@@ -20,6 +20,13 @@ namespace ClassLibrary.dto
         {
             get { return categoryName; }
             set { categoryName = value; }
+        }
+        private String typeImage;
+
+        public String TypeImage
+        {
+            get { return typeImage; }
+            set { typeImage = value; }
         }
         public Category()
         {

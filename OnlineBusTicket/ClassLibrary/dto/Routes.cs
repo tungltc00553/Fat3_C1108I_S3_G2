@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ClassLibrary.dto
 {
-    class Routes
+    public class Routes
     {
         private int routesId;
 
@@ -57,15 +57,28 @@ namespace ClassLibrary.dto
             set { decsription = value; }
         }
         private bool status;
+        private System.Data.DataRow dr;
 
         public bool Status
         {
             get { return status; }
             set { status = value; }
         }
+        public Routes(System.Data.DataRow dr)
+        {
+            //this.routesId = (int)dr["RoutesId"];
+            //this.routesName = dr["RoutesName"].ToString();
+            //this.startPlace = dr["StartPlace"].ToString();
+            //this.destinationPlace = dr["DestinationPlace"].ToString();
+            //this.createDate = (DateTime)dr["CreateDate"];
+            //this.time = (int)dr["Time"];
+            //this.decsription = dr["Decription"].ToString();
+            //this.status = (bool)dr["Status"];
+        }
+
         public Routes()
         {
-
+            // TODO: Complete member initialization
         }
     }
 }

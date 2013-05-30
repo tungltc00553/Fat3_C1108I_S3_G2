@@ -8,7 +8,7 @@
  */
  
 /* The Nivo Slider styles */
-.slider-wrapper { margin:0 0 20px 20px; position:relative; }
+.slider-wrapper { margin:0 0 20px 0; position:relative; }
 .nivoSlider { position:relative; height:auto; background:url(../images/loading.gif) no-repeat 50% 50%; overflow:hidden; }
 .nivoSlider img { position:absolute; top:0px; left:0px; max-width: none; }
 .nivo-main-image { display: block !important; position: relative !important; width: 100% !important; }

@@ -11,32 +11,43 @@ namespace ClassLibrary.dal
     public class ListBusDal : ApCoreDBConnect
     {
         /*
-         * @todo : get list bus
+         * @todo: get list top new
          * */
-        public static DataTable GetAllListBus()
+        public static DataTable GetListTopNew()
         {
-            return Read("sp_GetAllListBus", null);
+            return Read("sp_GetListBusTopNew", null);
         }
         /*
          * @todo : search list bus
          * */
-        public static DataTable SearchListBus(String from,String to,DateTime fromDate,DateTime toDate)
+        public static DataTable SearchListBus(String fromPlace, String toPlace, DateTime startDate, DateTime dueDate)
         {
-            SqlParameter[] arrParameter = new SqlParameter[4];
+            SqlParameter[] param = new SqlParameter[4];
 
-            arrParameter[0] = new SqlParameter("@From", SqlDbType.NVarChar, 50);
-            arrParameter[0].Value = "%"+from +"%";
+            param[0] = new SqlParameter("@FromPlace", SqlDbType.NVarChar, 50);
+            param[0].Value = fromPlace;
 
-            arrParameter[1] = new SqlParameter("@To", SqlDbType.NVarChar, 50);
-            arrParameter[1].Value ="%" + to + "%";
+            param[1] = new SqlParameter("@ToPlace", SqlDbType.NVarChar, 50);
+            param[1].Value = toPlace;
 
-            arrParameter[2] = new SqlParameter("@FromDate", SqlDbType.DateTime);
-            arrParameter[2].Value = "%" + fromDate + "%";
+            param[2] = new SqlParameter("@StartDate", SqlDbType.DateTime);
+            param[2].Value = startDate;
 
-            arrParameter[3] = new SqlParameter("@ToDate", SqlDbType.DateTime);
-            arrParameter[3].Value ="%"+ toDate + "%";
+            param[3] = new SqlParameter("@DueDate", SqlDbType.DateTime);
+            param[3].Value = dueDate;
 
-            return Read("sp_SearchListBus", arrParameter);
+            return Read("sp_SearchListBus", param);
+        }
+        /*
+         * @todo: get a list bus
+         * */
+        public static DataTable GetListBusByListBusId(int listBusId)
+        {
+            SqlParameter[] param = new SqlParameter[1];
+
+            param[0] = new SqlParameter("@ListBusId", SqlDbType.Int);
+            param[0].Value = listBusId;
+            return Read("sp_GetListBusByListBusId", param);
         }
     }
 }

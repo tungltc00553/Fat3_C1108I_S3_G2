@@ -34,6 +34,8 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,9 +43,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bll\AccountBll.cs" />
+    <Compile Include="bll\CustomerBll.cs" />
     <Compile Include="bll\ListBusBll.cs" />
+    <Compile Include="bll\PlaceBll.cs" />
+    <Compile Include="bll\PromoteBll.cs" />
+    <Compile Include="bll\RoutesBll.cs" />
+    <Compile Include="bll\SeatBll.cs" />
+    <Compile Include="bll\TicketBll.cs" />
+    <Compile Include="bll\TicketDetailBll.cs" />
+    <Compile Include="bll\TicketReturnBll.cs" />
+    <Compile Include="dal\AccountDal.cs" />
     <Compile Include="dal\ApCoreDBConnect.cs" />
+    <Compile Include="dal\CustomerDal.cs" />
     <Compile Include="dal\ListBusDal.cs" />
+    <Compile Include="dal\PlaceDal.cs" />
+    <Compile Include="dal\PromoteDal.cs" />
+    <Compile Include="dal\RoutesDal.cs" />
+    <Compile Include="dal\SeatDal.cs" />
+    <Compile Include="dal\TicketDal.cs" />
+    <Compile Include="dal\TicketDetailDal.cs" />
+    <Compile Include="dal\TicketReturnDal.cs" />
     <Compile Include="dto\Account.cs" />
     <Compile Include="dto\Bus.cs" />
     <Compile Include="dto\Category.cs" />
@@ -55,12 +75,13 @@
     <Compile Include="dto\Promote.cs" />
     <Compile Include="dto\Role.cs" />
     <Compile Include="dto\Routes.cs" />
+    <Compile Include="dto\Seat.cs" />
     <Compile Include="dto\Ticket.cs" />
+    <Compile Include="dto\TicketDetail.cs" />
     <Compile Include="dto\TicketReturn.cs" />
     <Compile Include="dto\Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

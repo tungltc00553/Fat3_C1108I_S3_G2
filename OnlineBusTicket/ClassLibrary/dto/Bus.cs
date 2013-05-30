@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 
 namespace ClassLibrary.dto
 {
-    class Bus
+    public class Bus
     {
         private int busId;
 
@@ -42,9 +43,13 @@ namespace ClassLibrary.dto
             get { return typeId; }
             set { typeId = value; }
         }
-        public Bus()
+        public Bus(DataRow dr)
         {
-
+            this.busId = (int)dr["ListBusId"];
+            this.busName = dr["BusName"].ToString();
+            this.categoryId = (int)dr["CategoryId"];
+            this.seat = (int)dr["Seat"];
+            this.typeId = (int)dr["TypeId"];
         }
     }
 }

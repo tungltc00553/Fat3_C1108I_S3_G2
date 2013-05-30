@@ -1,28 +1,31 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/OnlineBusTicket.master" AutoEventWireup="true"
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true"
     CodeFile="Home.aspx.cs" Inherits="Home" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     Home Page
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div class="breadcrumb">
-        <a href="#">Home</a> » <a href="#">Booking</a>
-    </div>
-    <!-- End .breadcrumb -->
-    <!-- Nivo Slider Start -->
-    <section class="slider-wrapper">
+<asp:Content ID="Content2" ContentPlaceHolderID="breadcrumb" runat="Server">
+    
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="content" runat="Server">
+    <div id="slider">
+        <!-- End .breadcrumb -->
+        <!-- Nivo Slider Start -->
+        <section class="slider-wrapper">
                       <div id="slideshow" class="nivoSlider"> <a class="nivo-imagesLink" href="#"><img src="images/slider/slide-1.jpg" alt="slide-1" /></a> <a class="nivo-imagesLink" href="#"><img src="images/slider/slide-2.jpg" alt="slide-2" /></a> <a class="nivo-imagesLink" href="#"><img src="images/slider/slide-3.jpg" alt="slide-3" /></a> </div>
                     </section>
-    <!-- Nivo Slider End-->
+        <!-- Nivo Slider End-->
+    </div>
+    <!-- End #slider -->
     <div id="news">
         <h2>
-            Tour New</h2>
+            Book News</h2>
         <asp:Repeater ID="rptListBus" runat="server">
             <ItemTemplate>
                 <div class="news-item">
                     <div class="item-image">
                         <a href="#">
-                            <img src="<%# Eval("ImageUrl") %>" /></a>
+                            <img src="<%# Eval("TypeImage") %>" /></a>
                     </div>
                     <!-- End .image -->
                     <div class="item-content">

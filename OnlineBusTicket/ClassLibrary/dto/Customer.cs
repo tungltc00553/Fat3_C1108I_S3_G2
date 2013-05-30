@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 
 namespace ClassLibrary.dto
 {
-    class Customer
+    public class Customer
     {
         private int customerId;
 
@@ -49,9 +50,19 @@ namespace ClassLibrary.dto
             get { return address; }
             set { address = value; }
         }
+        public Customer(DataRow dr)
+        {
+            this.customerId = (int)dr["CustomerId"];
+            this.customerName = dr["CustomerName"].ToString();
+            this.age = (int)dr["Age"];
+            this.phone = dr["Phone"].ToString();
+            this.email = dr["Email"].ToString();
+            this.address = dr["Address"].ToString();
+        }
+
         public Customer()
         {
-
+            // TODO: Complete member initialization
         }
     }
 }
