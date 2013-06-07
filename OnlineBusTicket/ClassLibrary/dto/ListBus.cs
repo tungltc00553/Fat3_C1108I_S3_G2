@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data;
 
 namespace ClassLibrary.dto
 {
@@ -28,13 +27,6 @@ namespace ClassLibrary.dto
         {
             get { return routesId; }
             set { routesId = value; }
-        }
-        private int busId;
-
-        public int BusId
-        {
-            get { return busId; }
-            set { busId = value; }
         }
         private DateTime departure;
 
@@ -64,21 +56,16 @@ namespace ClassLibrary.dto
             get { return startTime; }
             set { startTime = value; }
         }
-        public ListBus(DataRow dr)
-        {
-            this.listBusId = (int)dr["ListBusId"];
-            this.busPlate = dr["BusPlate"].ToString();
-            this.routesId = (int)dr["RoutesId"];
-            this.busId = (int)dr["BusId"];
-            this.departure = (DateTime)dr["Departure"];
-            this.arrival = (DateTime)dr["Arrival"];
-            this.price = (decimal)dr["Price"];
-            this.startTime = (int)dr["StartTime"];
-        }
+        private int busId;
 
+        public int BusId
+        {
+            get { return busId; }
+            set { busId = value; }
+        }
         public ListBus()
         {
-            // TODO: Complete member initialization
+
         }
     }
 }

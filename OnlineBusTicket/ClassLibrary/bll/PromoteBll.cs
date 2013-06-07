@@ -2,20 +2,32 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using ClassLibrary.dto;
 using ClassLibrary.dal;
-using System.Data;
 
 namespace ClassLibrary.bll
 {
     public class PromoteBll
     {
         /*
-         * @todo: get promote by age
+         * @todo : get list place
          * */
-        public static Promote GetPromoteByAge(int age)
+        public static DataTable GetAllPlace()
         {
-            return PromoteDal.GetPromoteByAge(age);
+            return PromoteDal.GetAllPlace();
+        }
+        /*
+         * @todo: get discount
+         * */
+        public static int GetDiscount(int promoteId)
+        {
+            int discount = 0;
+            if (PromoteDal.GetDiscount(promoteId)!=null)
+            {
+                discount= (int)PromoteDal.GetDiscount(promoteId);
+            }
+            return discount;
         }
     }
 }

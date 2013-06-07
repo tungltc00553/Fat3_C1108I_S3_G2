@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0444A0C2-82F6-423B-8CA0-6B6846D78A8C}</ProjectGuid>
+    <ProjectGuid>{24EF5F82-21D9-47A3-8DA2-258F76542E9B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ClassLibrary</RootNamespace>
@@ -34,8 +34,6 @@
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,44 +42,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="bll\AccountBll.cs" />
-    <Compile Include="bll\CustomerBll.cs" />
     <Compile Include="bll\ListBusBll.cs" />
+    <Compile Include="bll\OrderBll.cs" />
     <Compile Include="bll\PlaceBll.cs" />
     <Compile Include="bll\PromoteBll.cs" />
-    <Compile Include="bll\RoutesBll.cs" />
     <Compile Include="bll\SeatBll.cs" />
-    <Compile Include="bll\TicketBll.cs" />
-    <Compile Include="bll\TicketDetailBll.cs" />
-    <Compile Include="bll\TicketReturnBll.cs" />
     <Compile Include="dal\AccountDal.cs" />
     <Compile Include="dal\ApCoreDBConnect.cs" />
     <Compile Include="dal\CustomerDal.cs" />
     <Compile Include="dal\ListBusDal.cs" />
+    <Compile Include="dal\OrderDal.cs" />
     <Compile Include="dal\PlaceDal.cs" />
     <Compile Include="dal\PromoteDal.cs" />
-    <Compile Include="dal\RoutesDal.cs" />
     <Compile Include="dal\SeatDal.cs" />
-    <Compile Include="dal\TicketDal.cs" />
-    <Compile Include="dal\TicketDetailDal.cs" />
-    <Compile Include="dal\TicketReturnDal.cs" />
-    <Compile Include="dto\Account.cs" />
     <Compile Include="dto\Bus.cs" />
-    <Compile Include="dto\Category.cs" />
     <Compile Include="dto\Customer.cs" />
-    <Compile Include="dto\FAQs.cs" />
     <Compile Include="dto\ListBus.cs" />
-    <Compile Include="dto\News.cs" />
-    <Compile Include="dto\Place.cs" />
-    <Compile Include="dto\Promote.cs" />
-    <Compile Include="dto\Role.cs" />
+    <Compile Include="dto\Order.cs" />
+    <Compile Include="dto\OrderDetail.cs" />
     <Compile Include="dto\Routes.cs" />
     <Compile Include="dto\Seat.cs" />
-    <Compile Include="dto\Ticket.cs" />
-    <Compile Include="dto\TicketDetail.cs" />
-    <Compile Include="dto\TicketReturn.cs" />
     <Compile Include="dto\Type.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

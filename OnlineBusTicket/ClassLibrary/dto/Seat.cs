@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data;
 
 namespace ClassLibrary.dto
 {
@@ -36,17 +35,9 @@ namespace ClassLibrary.dto
             get { return status; }
             set { status = value; }
         }
-        public Seat(DataRow dr)
-        {
-            this.seatId = (int)dr["SeatId"];
-            this.listBusId = (int)dr["ListBusId"];
-            this.numberSeat = (int)dr["NumberSeat"];
-            this.status = (bool)dr["Status"];
-        }
-
         public Seat()
         {
-            // TODO: Complete member initialization
+
         }
     }
 }

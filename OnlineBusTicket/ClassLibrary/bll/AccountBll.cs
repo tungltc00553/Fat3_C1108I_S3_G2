@@ -14,14 +14,7 @@ namespace ClassLibrary.bll
          * */
         public static object Login(String username, String password)
         {
-            return AccountDal.Login(username,password);
-        }
-        /*
-         * @todo: get acc by username
-         * */
-        public static int GetAccountIdByUsername(string username)
-        {
-            return (int)AccountDal.GetAccountIdByUsername(username);
+            return AccountDal.Login(username, password);
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using ClassLibrary.dto;
 
 namespace ClassLibrary.dal
 {
@@ -11,9 +12,9 @@ namespace ClassLibrary.dal
         /*
          * @todo : get list place
          * */
-        public static DataTable GetAllListPlace()
+        public static DataTable GetAllPlace()
         {
-            return Read("sp_GetAllListPlace", null);
+            return Read("sp_GetAllPlace", null);
         }
     }
 }

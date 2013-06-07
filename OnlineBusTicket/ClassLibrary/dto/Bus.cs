@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data;
 
 namespace ClassLibrary.dto
 {
@@ -22,13 +21,6 @@ namespace ClassLibrary.dto
             get { return busName; }
             set { busName = value; }
         }
-        private int categoryId;
-
-        public int CategoryId
-        {
-            get { return categoryId; }
-            set { categoryId = value; }
-        }
         private int seat;
 
         public int Seat
@@ -43,13 +35,9 @@ namespace ClassLibrary.dto
             get { return typeId; }
             set { typeId = value; }
         }
-        public Bus(DataRow dr)
+        public Bus()
         {
-            this.busId = (int)dr["ListBusId"];
-            this.busName = dr["BusName"].ToString();
-            this.categoryId = (int)dr["CategoryId"];
-            this.seat = (int)dr["Seat"];
-            this.typeId = (int)dr["TypeId"];
+
         }
     }
 }

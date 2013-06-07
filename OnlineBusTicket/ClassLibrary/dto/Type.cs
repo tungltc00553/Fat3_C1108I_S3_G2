@@ -5,11 +5,11 @@ using System.Text;
 
 namespace ClassLibrary.dto
 {
-    class Type
+    public class Type
     {
         private int typeId;
 
-        public int TtypeId
+        public int TypeId
         {
             get { return typeId; }
             set { typeId = value; }
@@ -20,6 +20,13 @@ namespace ClassLibrary.dto
         {
             get { return typeName; }
             set { typeName = value; }
+        }
+        private String typeImage;
+
+        public String TypeImage
+        {
+            get { return typeImage; }
+            set { typeImage = value; }
         }
         public Type()
         {

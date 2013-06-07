@@ -2,35 +2,30 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data.SqlClient;
 using System.Data;
-using ClassLibrary.dto;
+using System.Data.SqlClient;
 
 namespace ClassLibrary.dal
 {
     public class PromoteDal: ApCoreDBConnect
     {
-        public static List<Promote> GetList(String storedProcedureName, SqlParameter[] arrParameter)
+        /*
+         * @todo : get list place
+         * */
+        public static DataTable GetAllPlace()
         {
-            List<Promote> list = new List<Promote>();
-            DataTable dt = Read(storedProcedureName, arrParameter);
-            foreach (DataRow dr in dt.Rows)
-            {
-                list.Add(new Promote(dr));
-            }
-            return list;
+            return Read("sp_GetAllPromote", null);
         }
         /*
-         * @todo: get promote by age
+         * @todo: get discount
          * */
-        public static Promote GetPromoteByAge(int age)
+        public static object GetDiscount(int promoteId)
         {
             SqlParameter[] param = new SqlParameter[1];
 
-            param[0] = new SqlParameter("@Age", SqlDbType.Int);
-            param[0].Value = age;
-
-            return GetList("sp_GetPromoteByAge", param)[0] ;
+            param[0] = new SqlParameter("@PromoteId", SqlDbType.Int);
+            param[0].Value = promoteId;
+            return ExcuteScalar("sp_GetDiscount", param);
         }
     }
 }

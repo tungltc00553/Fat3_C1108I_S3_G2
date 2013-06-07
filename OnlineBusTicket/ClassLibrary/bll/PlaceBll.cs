@@ -13,9 +13,9 @@ namespace ClassLibrary.bll
         /*
          * @todo : get list place
          * */
-        public static DataTable GetAllListPlace()
+        public static DataTable GetAllPlace()
         {
-            return PlaceDal.GetAllListPlace();
+            return PlaceDal.GetAllPlace() ;
         }
     }
 }

@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script type="text/javascript">
+        var time = 10;
+        var page = "Home.aspx";
+        function countDown() {
+            time--;
+            gett("container").innerHTML = time;
+            if (time == 0) {
+                window.location = page;
+            }
+        }
+        function gett(id) {
+            if (document.getElementById)
+                return document.getElementById(id);
+            if (document.all)
+                return document.all.id;
+            if (document.layers)
+                return document.layers.id;
+            if (window.opera)
+                return window.opera.id;
+        }
+        function init() {
+            if (gett('container')) {
+                setInterval(countDown, 1000);
+                gett("container").innerHTML = time;
+            } else {
+                setTimeout(init, 50);
+            }
+        }
+        document.onload = init();
+    </script>
+</head>
+<body style="background-color: #fff; color: black;">
+    <table style="margin: 0 auto;">
+        <tr>
+            <td style="text-align: center;">
+                <h1>
+                    Finish !
+                    Please <span id="container"></span>s !<br />
+                    or click  <a href="Home.aspx">here</a>back home.</h1>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

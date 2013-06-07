@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Data;
 
 namespace ClassLibrary.dto
 {
@@ -50,19 +49,23 @@ namespace ClassLibrary.dto
             get { return address; }
             set { address = value; }
         }
-        public Customer(DataRow dr)
-        {
-            this.customerId = (int)dr["CustomerId"];
-            this.customerName = dr["CustomerName"].ToString();
-            this.age = (int)dr["Age"];
-            this.phone = dr["Phone"].ToString();
-            this.email = dr["Email"].ToString();
-            this.address = dr["Address"].ToString();
-        }
+        private String username;
 
+        public String Username
+        {
+            get { return username; }
+            set { username = value; }
+        }
+        private String password;
+
+        public String Password
+        {
+            get { return password; }
+            set { password = value; }
+        }
         public Customer()
         {
-            // TODO: Complete member initialization
+
         }
     }
 }

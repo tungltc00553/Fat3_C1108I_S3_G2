@@ -10,7 +10,7 @@ namespace ClassLibrary.bll
 {
     public class SeatBll
     {
-        /*
+         /*
          * @todo : get list seat
          * */
         public static DataTable GetAllListSeat(int listBusId)

@@ -42,43 +42,30 @@ namespace ClassLibrary.dto
             get { return createDate; }
             set { createDate = value; }
         }
-        private int time;
+        private int startTime;
 
-        public int Time
+        public int StartTime
         {
-            get { return time; }
-            set { time = value; }
+            get { return startTime; }
+            set { startTime = value; }
         }
-        private String decsription;
+        private String decription;
 
-        public String Decsription
+        public String Decription
         {
-            get { return decsription; }
-            set { decsription = value; }
+            get { return decription; }
+            set { decription = value; }
         }
         private bool status;
-        private System.Data.DataRow dr;
 
         public bool Status
         {
             get { return status; }
             set { status = value; }
         }
-        public Routes(System.Data.DataRow dr)
-        {
-            //this.routesId = (int)dr["RoutesId"];
-            //this.routesName = dr["RoutesName"].ToString();
-            //this.startPlace = dr["StartPlace"].ToString();
-            //this.destinationPlace = dr["DestinationPlace"].ToString();
-            //this.createDate = (DateTime)dr["CreateDate"];
-            //this.time = (int)dr["Time"];
-            //this.decsription = dr["Decription"].ToString();
-            //this.status = (bool)dr["Status"];
-        }
-
         public Routes()
         {
-            // TODO: Complete member initialization
+
         }
     }
 }

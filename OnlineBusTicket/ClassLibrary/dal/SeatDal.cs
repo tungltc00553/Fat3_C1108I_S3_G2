@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Data;
 using System.Data.SqlClient;
+using ClassLibrary.dto;
 
 namespace ClassLibrary.dal
 {
-    public class SeatDal: ApCoreDBConnect
+    public class SeatDal : ApCoreDBConnect
     {
         /*
          * @todo : get list seat
